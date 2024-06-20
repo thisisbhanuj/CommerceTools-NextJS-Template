@@ -1,17 +1,22 @@
-import Link from "next/link";
+import Link from "next/link"
 
-export default function Home() {
+export default function Component() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Commerce Tools SDK API Tester
-          <br />
-          <Link href="/apitester">
-            <div className="underline">Get Started</div>
-          </Link>
+    <div className="flex min-h-[100dvh] flex-col items-center justify-center bg-background px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-2xl text-center">
+        <p className="mt-6 text-lg leading-8 text-muted-foreground">
+        Welcome to Commerce Tools - NextJS API Tester
         </p>
+        <div className="mt-10 flex items-center justify-center gap-x-6">
+          <Link
+            href="/apitester"
+            className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            prefetch={false}
+          >
+            Get Started
+          </Link>
+        </div>
       </div>
-    </main>
-  );
+    </div>
+  )
 }
